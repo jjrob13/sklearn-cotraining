@@ -127,7 +127,7 @@ class CoTrainingClassifier(object):
 			L.extend([U_[x] for x in p])
 			L.extend([U_[x] for x in n])
 
-			U_ = [elem for elem in U_ if (elem in p or elem in n)]
+			U_ = [elem for elem in U_ if not (elem in p or elem in n)]
 
 			#add new elements to U_
 			add_counter = 0 #number we have added from U to U_
